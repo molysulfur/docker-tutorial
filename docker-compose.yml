@@ -1,0 +1,9 @@
+version: '3'
+services:
+  redis-server: # ==> name
+    image: 'redis' # ==> image
+  node-app:
+    restart: 'no'
+    build : . # ==> build docker file
+    ports:
+      - "8080:8080" # ==> port os to container
